@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+.titulo-principal {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: #ffffff; 
+    text-transform: uppercase;
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif; 
+    background: linear-gradient(to right, lightblue, blue)
+}
+
+header {
+    width: calc(100%-20px); 
+    text-align: center; 
+    padding: 20px 0; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 80px;
+   margin-right: 50px;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("./imagenes/ecuador.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    position:relative;
+    transition: background-color 0.3s ease;
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto)); 
+    gap: 20px; 
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    
+}
+.bloque {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6); 
+    height: 450px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+
+.lado-clima {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #2F4F4F; 
+    padding: 20px;
+    border-bottom: 2px solid yellow;
+}
+.expandido {
+    transform: scale(1.5); 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) scale(1.5); 
+    z-index: 20; 
+    width: 30%; 
+    height: auto; 
+}
+.expandido-active {
+    background-color: rgba(0, 0, 0, 0.7) !important; 
+    z-index: 1;
+}
+
+.overlay-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: none; 
+    z-index: 5; 
+}
+.gradiente-clima-invierno {
+    background: linear-gradient(to right, #00c6ff, #0072ff); 
+    border-radius: 15px;
+    opacity: 0.9;
+    height: 300px;
+}
+
+
+.gradiente-clima-primavera {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); 
+    border-radius: 15px;
+    opacity: 0.9;
+    height: 300px;
+}
+
+.gradiente-clima-verano {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); 
+    border-radius: 15px;
+    opacity: 0.9;
+    height: 300px;
+}
+
+
+.gradiente-clima-otono {
+    background: linear-gradient(to right, #ffb347, #ffcc33); 
+    border-radius: 15px;
+    opacity: 0.9;
+    height: 300px;
+}
+
+.contenedor-fecha {
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+.nombre-dia {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.fecha-dia {
+    display: block;
+    font-size: 1.1em;
+}
+
+.ubicacion {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.icono-ubicacion {
+    display: inline-block;
+    height: 0.8em;
+    width: auto;
+    margin-right: 5px;
+}
+
+.contenedor-clima {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.icono-clima.feather {
+    height: 60px;
+    width: auto;
+}
+
+.temperatura-clima {
+    margin: 0;
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.descripcion-clima {
+    margin: 0;
+}
+
+
+.lado-info {
+    background-color: #222831; 
+}
+
+.info-hoy {
+    padding: 10px;
+}
+
+.info-hoy > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.info-hoy > div .titulo {
+    font-weight: 700;
+}
+
+.info-hoy > div .valor {
+    float: right;
+}
+
